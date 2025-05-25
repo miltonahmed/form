@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.contact {
+  width: 80%;
+  border: 1px solid #dddd;
+  margin: 20px auto;
+  padding: 5%;
+  text-align: center;
+}
+
+.contact h2 {
+  font-weight: bold;
+  font-size: 35px;
+  margin-bottom: 0;
+}
+.contact form {
+  margin-top: 25px;
+}
+.child_form {
+  width: 100%;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.child_form input,
+.child_form select,
+.child_form textarea {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px 2%;
+  width: 90%;
+  text-transform: capitalize;
+}
+.child_form select {
+  width: 94%;
+}
+.child_form input[type='button'] {
+  width: 500px;
+  background-color: blueviolet;
+  border: 1px solid blueviolet;
+  color: #fff;
+  cursor: pointer;
+}
+.child_form input[type='button']:hover {
+  background-color: black;
+  color: #fff;
+}
+.child_form label {
+  display: block;
+  margin-bottom: 5px;
+}
+.child_form:last-child {
+  margin-bottom: 0;
+}
