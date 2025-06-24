@@ -46,6 +46,57 @@
       </div>
     </form>
   </div>
+
+
+
+
+  <script>
+    const form = document.getElementById('contactForm');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // ফর্ম সাবমিট আটকে দিচ্ছে
+
+      // ফিল্ড গুলো সংগ্রহ
+      const name = form.querySelector('input[name="name"]').value.trim();
+      const email = form.querySelector('input[type="email"]').value.trim();
+      const phone = form.querySelector('input[name="phone"]').value.trim();
+      const country = form.querySelector('select[name="country"]').value;
+      const message = form.querySelector('textarea').value.trim();
+
+      // সহজ ভ্যালিডেশন
+      if (name === '') {
+        alert('Please enter your name');
+        return;
+      }
+
+      if (email === '' || !validateEmail(email)) {
+        alert('Please enter a valid email');
+        return;
+      }
+
+      if (phone === '' || phone.length < 7) {
+        alert('Please enter a valid phone number');
+        return;
+      }
+
+      if (message === '') {
+        alert('Please enter your message');
+        return;
+      }
+
+      // সফল সাবমিশন এলার্ট
+      alert('Thank you for contacting us!');
+
+      form.reset(); // ফর্ম রিসেট করে দেয়
+    });
+
+    // ইমেইল ভ্যালিডেশন ফাংশন
+    function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email.toLowerCase());
+    }
+  </script>
+
 </body>
 
 </html>
